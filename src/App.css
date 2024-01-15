@@ -1,38 +1,363 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.flex-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color:white;
+  justify-content: flex-end;
+  
+  }
+  
+  
+  .solid-white-background {
+    background-color: white;
+    border: 2px solid black;
+}
+  
+  
+  
+  .flex-container div{
+  margin-left: 10px;
+  background-color: white;
+  padding: 2px;
+  padding-bottom: 10px;
+  
+  
+  
+  }
+  
+  
+  .flex-con{
+    display: flex;
+    background-color:white;
+    justify-content: flex-start;
+    
+    }
+    
+    
+    
+    
+    
+    
+    .flex-con div{
+  
+    background-color: white;
+  width: 50%;
+    padding-bottom: 10px;
+    
+    
+    
+    }
+  
+  
+  
+  
+  .flex-c{
+      display: flex;
+      background-color:rgb(21, 21, 172);
+      justify-content: flex-end;
+      
+      }
+  
+  .flex-c div{
+  
+  padding :10px;
+  
+  
+  
+  }
+  
+  
+  .nested-flex{
+  display: flex;
+  background-color: blue;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .center {
+      z-index: 9999;
+      position: relative;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #000;
+      
+    }
+  
+  
+  .bc{
+  
+  
+    
+      z-index: 9999;
+      position: relative;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #000;
+      
+    
   }
-}
+  
+  
+  
+  
+  
+  
+    .center-img {
+    
+  
+      height: auto;
+      position: relative;
+      left: 0%;
+      top: 0%;
+     
+    }
+  
+  
+    .btn{
+      background-color: white;
+  
+    }
+  
+    .img-2{
+      background-color: black;
+  
+    }
+  
+    ::placeholder{
+      color: white;
+    }
+  
+    .con {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+  
+    .txt{
+   
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: larger;
+      position: absolute;
+    
+      
+  
+  
+    }
+  
+    .txted {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+    }
+  
+    .ff{
+      display: flex;
+      border:2px solid yellow;
+      top: 40%;
+      left: 30%;
+  
+    }
+  
+  
+  
+    .fl {
+      display: flex;
+      justify-content: center;
+      background-color: DodgerBlue;
+    }
+    
+    .fl-container > div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+  
+  
+  
+  
+  
+    .box{
+      margin-top: 10px;
+      width: 20%;
+      height: 20%;
+      margin-left: 30px;
+      border-radius: 0px 50px;
+  
+  
+    }
+  
+    .txt-area{
+      top:10%; 
+      margin-left:15% ;
+      width: 290px;
+      height: 39px;
+      color: #FFFFFF;
+      background: #005C4D 0% 0% no-repeat padding-box;
+      border-radius: 6px;
+      opacity: 1;
+  
+  
+  
+    }
+  
+  
+    .err {
+      background: #ffe6ee;
+      border: 1px solid #b1395f;
+  }
+  
+  .emsg {
+      color: #c12020;
+      font-weight: bold;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+  
+    .error-message {
+              color: red;
+              font-size: 14px;
+              margin-top: 4px;
+              display: block;
+          }
+  
+  
+          .fk{
+  
+  
+          
+              margin: auto;
+              width: 50%;
+              border: 3px solid green;
+              padding: 10px;
+            
+          }
+  
+  
+  
+
+
+          .App {
+            text-align: center;
+          }
+          
+          .App-logo {
+            height: 40vmin;
+            pointer-events: none;
+          }
+          
+          @media (prefers-reduced-motion: no-preference) {
+            .App-logo {
+              animation: App-logo-spin infinite 20s linear;
+            }
+          }
+          
+          .App-header {
+            background-color: #282c34;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+          }
+          
+          .App-link {
+            color: #61dafb;
+          }
+          
+          @keyframes App-logo-spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          
+          
+          .login-box{
+          
+            height:200px;
+            background-color:white;
+            opacity:0.6;
+            box-shadow:10px 10px 8px #888888;
+            text-align:center;
+            max-width: 300px;
+            margin:auto;
+          
+          
+          
+           
+          }
+          .bg-1{
+            background: url(./image/login.jpg);
+            width: 100%;
+            min-height: 850px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 300px;
+          }
